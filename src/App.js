@@ -4,6 +4,7 @@ import CartContainer from './components/CartContainer'
 import { useSelector, useDispatch } from 'react-redux'
 import { calculateTotals } from './redux/features/cart/cartSlice'
 import { useEffect } from 'react'
+import Modal from './components/Modal'
 
 function App() {
   const dispatch = useDispatch()
@@ -13,6 +14,7 @@ function App() {
   }, [cartItems])
   return (
     <main>
+      <Modal />
       <Navbar />
       <CartContainer />
     </main>
