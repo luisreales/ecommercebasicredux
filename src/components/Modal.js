@@ -10,6 +10,9 @@ const Modal = () => {
     dispatch(closeModal())
 
   }
+  const handleCancel = () => {
+     dispatch(closeModal())
+  }
   return (
     <aside className="modal-container">
       <div className="modal">
@@ -18,7 +21,7 @@ const Modal = () => {
           <button type="button" className="btn confirm-btn" onClick={() => handleDeleteItems()}>
             confirm
           </button>
-          <button type="button" className="btn clear-btn">
+          <button type="button" className="btn clear-btn" onClick={() => handleCancel()}>
             cancel
           </button>
         </div>
